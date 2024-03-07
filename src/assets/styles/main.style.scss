@@ -1,0 +1,17 @@
+@import "./reset.scss";
+@import "./variable.scss";
+
+body {
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  font-family: $fontRegular;
+}
+
+#root {
+  display: flex;
+  width: 100%;
+  color: white;
+  background: $neutral_1;
+  flex-direction: column;
+}
