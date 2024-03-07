@@ -1,7 +1,12 @@
 import "./assets/styles/main.style.scss";
+import Header from "./components/header/header";
 
 function App() {
-  return <>lorem*150</>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default App;
