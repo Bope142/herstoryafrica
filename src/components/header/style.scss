@@ -7,10 +7,22 @@
   padding: 50px $padding__section;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background: white;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 55;
   & h1 {
     font-family: $fontBold;
     font-size: 2rem;
     color: $neutral_1;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header {
+    padding: 50px 20px;
+    & h1 {
+      font-size: 1.5rem;
+    }
   }
 }

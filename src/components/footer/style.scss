@@ -1,2 +1,32 @@
 @import "../../assets/styles/variable.scss";
 @import "../../assets/styles/reset.scss";
+
+footer {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  line-height: 1.5rem;
+  padding: 50px $padding__section;
+  background: #232222;
+  font-family: $fontRegular;
+  font-size: 1rem;
+  margin-top: auto;
+  text-align: center;
+  & a {
+    text-decoration: none;
+    font-family: $fontMeduim;
+    font-size: 1rem;
+    color: white;
+    margin-left: 10px;
+    transition: all 0.3s linear;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  footer {
+    padding: 50px 20px;
+  }
+}
