@@ -33,7 +33,7 @@ function App() {
     setMdalOpen(false);
   };
   const shareOnSocialMedia = async () => {
-    const Link = "https://awesome-quotes.vercel.app/";
+    const Link = "https://herstoryafrica.vercel.app/";
     const shareMessage = `Découvrez des histoires inspirantes de femmes africaines sur HerStoryAfrica. Rejoignez-nous pour célébrer leur influence et leur impact ! ${Link}`;
 
     try {
