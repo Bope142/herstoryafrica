@@ -1,0 +1,158 @@
+@import "../../assets/styles/variable.scss";
+@import "../../assets/styles/reset.scss";
+
+.card__about {
+  display: flex !important;
+  flex-direction: column !important;
+  row-gap: 25px;
+  border-radius: 0.8rem;
+  background: white;
+  padding: 35px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s linear;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0);
+  & * {
+    transition: all 0.3s linear;
+  }
+  &:hover {
+    background: black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border: 2px solid white;
+    &::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    & .order {
+      color: rgb(0, 0, 0);
+      background: $neutral_2;
+    }
+    & .title {
+      font-family: $fontBold;
+      font-size: 2rem;
+      color: $neutral_2;
+      z-index: 40;
+    }
+    & .overview {
+      color: $neutral_2;
+    }
+  }
+  &::after {
+    content: "";
+    background: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s linear;
+    left: 50%;
+    top: 50%;
+    border-radius: 0.8rem;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  & .order {
+    height: 50px;
+    width: 50px;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    color: white;
+    background: $neutral_1;
+    align-self: flex-start;
+    font-family: $fontBold;
+    font-size: 1.5rem;
+    z-index: 40;
+  }
+  & .title {
+    font-family: $fontBold;
+    font-size: 2rem;
+    color: $neutral_1;
+    z-index: 40;
+  }
+  & .overview {
+    font-family: $fontRegular;
+    font-size: 1.5rem;
+    color: $neutral_1;
+    line-height: 1.8rem;
+    z-index: 40;
+  }
+}
+
+.card__profil {
+  display: flex;
+  position: relative;
+  border: 3px solid white;
+  border-radius: 0.8rem;
+  width: 50px;
+  overflow: hidden;
+  flex: none;
+  height: 400px;
+  transition: all 0.3s linear;
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s linear;
+  }
+  &:hover {
+    & img {
+      transform: scale(1.5);
+    }
+    width: 280px;
+    & .detail__profil {
+      & .content {
+        transition: all 0.3s linear;
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+  }
+  & .detail__profil {
+    display: flex;
+    align-items: end;
+    background: transparent;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    & .content {
+      transition: all 0.3s linear;
+      opacity: 0;
+      transform: translateY(100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      gap: 25px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.01);
+      & .btn {
+        align-self: center;
+        font-size: 0.9rem;
+      }
+      & .name {
+        font-family: $fontMeduim;
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .card__about {
+    & .overview {
+      font-family: $fontRegular;
+      font-size: 1rem;
+      color: $neutral_1;
+      line-height: 1.5rem;
+    }
+  }
+}

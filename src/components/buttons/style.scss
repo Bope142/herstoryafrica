@@ -1,0 +1,25 @@
+@import "../../assets/styles/variable.scss";
+@import "../../assets/styles/reset.scss";
+
+.btn {
+  font-family: $fontRegular;
+  border: none !important;
+  outline: none;
+  border-radius: 5rem;
+  padding: 20px 45px;
+  font-size: 1.2rem;
+}
+
+.btn-icons {
+  padding: 15px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-link {
+  color: rgb(0, 0, 0) !important;
+  background-color: white;
+  text-decoration: none;
+}

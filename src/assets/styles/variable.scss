@@ -1,0 +1,39 @@
+/*Export fonts */
+@font-face {
+  font-family: "ClashGroteskBold";
+  src: url("../fonts/ClashGrotesk-Bold.otf");
+}
+@font-face {
+  font-family: "ClashGroteskExtralight";
+  src: url("../fonts/ClashGrotesk-Extralight.otf");
+}
+
+@font-face {
+  font-family: "ClashGroteskMedium";
+  src: url("../fonts/ClashGrotesk-Medium.otf");
+}
+
+@font-face {
+  font-family: "ClashGroteskRegular";
+  src: url("../fonts/ClashGrotesk-Regular.otf");
+}
+
+@font-face {
+  font-family: "ClashGroteskLight";
+  src: url("../fonts/ClashGrotesk-Light.otf");
+}
+
+/*fonts varialble*/
+$fontBold: "ClashGroteskBold", sans-serif;
+
+$fontMeduim: "ClashGroteskMedium", sans-serif;
+
+$fontRegular: "ClashGroteskRegular", sans-serif;
+
+$fontLight: "ClashGroteskLight", sans-serif;
+
+$neutral_1: #000000;
+$neutral_2: #ffffff;
+$neutral_3: rgba(#000000, 0.2);
+
+$padding__section: 80px;

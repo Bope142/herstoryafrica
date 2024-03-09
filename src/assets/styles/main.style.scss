@@ -1,0 +1,262 @@
+@import "./reset.scss";
+@import "./variable.scss";
+
+* {
+  scroll-behavior: smooth !important;
+  user-select: none;
+}
+
+.scroll-ration {
+  position: fixed;
+  height: 50px;
+  width: 90%;
+  background: red;
+  z-index: 98;
+}
+::-webkit-scrollbar {
+  width: 10px; /* Largeur de la barre de défilement */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Couleur de fond de la barre de défilement */
+}
+
+/* Bouton de défilement (flèches) */
+::-webkit-scrollbar-button {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Zone de défilement sur laquelle le bouton de défilement repose */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.8); /* Couleur de la barre de défilement */
+}
+
+/* Coin de la zone de défilement, visible lors du survol */
+::-webkit-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body {
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  font-family: $fontRegular;
+}
+
+#root {
+  display: flex;
+  width: 100%;
+  color: white;
+  height: auto;
+  background: $neutral_1;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.container__banner {
+  display: flex;
+  align-items: center;
+  padding: 50px $padding__section;
+  background: $neutral_1;
+  padding-top: 200px;
+  gap: 45px;
+
+  //  overflow: hidden;
+
+  & .banner__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+    & h2 {
+      font-family: $fontBold;
+      font-size: 7.5rem;
+      color: $neutral_2;
+      line-height: auto;
+      word-wrap: break-word;
+      align-self: flex-start;
+      text-align: left !important;
+    }
+    & p {
+      font-family: $fontRegular;
+      font-size: 2.5rem;
+      opacity: 0.8;
+    }
+    & .btn {
+      align-self: flex-start;
+    }
+  }
+}
+
+.banner__images {
+  display: flex;
+  overflow: hidden;
+  gap: 10px;
+  justify-content: center;
+  margin-left: auto;
+  flex-wrap: wrap;
+  padding: 10px 25px;
+
+  & .banner-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    height: 150px;
+    transition: all 0.3s linear !important;
+    width: auto;
+    border: 2px solid white;
+    cursor: pointer;
+    &:hover {
+      transform: rotate(8deg);
+      & img {
+        transform: scale(1.5);
+      }
+    }
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.3s linear !important;
+    }
+  }
+}
+
+.about__section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  padding: 50px $padding__section;
+  background: $neutral_1;
+
+  & .about__content {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 250px;
+  }
+}
+
+.container__profils {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 100px $padding__section;
+  background: $neutral_1;
+  row-gap: 80px;
+  scroll-behavior: smooth;
+  & .datils {
+    font-family: $fontRegular;
+    font-size: 2rem;
+    text-align: center;
+    opacity: 0.7;
+  }
+}
+
+.container__profil {
+  display: flex;
+  overflow-x: scroll;
+  gap: 15px;
+}
+
+.controll-slide {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.cta__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 50px $padding__section;
+  & p {
+    font-family: $fontBold;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 3.5rem;
+  }
+}
+
+.special__thanks {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  padding: 50px $padding__section;
+  & .p {
+    text-align: center;
+    font-family: $fontRegular;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-top: 55px;
+  }
+}
+
+section {
+  padding: 50px $padding__section;
+}
+@media only screen and (max-width: 1220px) {
+  .container__banner {
+    flex-direction: column;
+  }
+  .banner__images {
+    margin-left: 0;
+  }
+  .about__content {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px !important;
+    padding-bottom: 10px !important;
+    & * {
+      transform: none !important;
+    }
+  }
+  .banner__images {
+    display: flex;
+    overflow: hidden;
+    gap: 10px;
+
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+  .about__section {
+    padding-bottom: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .banner__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+    & h2 {
+      font-family: $fontBold;
+      font-size: 4rem !important;
+      color: $neutral_2;
+      line-height: auto;
+    }
+    & p {
+      font-family: $fontRegular;
+      font-size: 1.2rem !important;
+      line-height: 1.5rem !important;
+      opacity: 0.8;
+    }
+    & .btn {
+      align-self: flex-start;
+      font-size: 0.9rem !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+}

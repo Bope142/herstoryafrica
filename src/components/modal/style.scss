@@ -1,0 +1,83 @@
+@import "../../assets/styles/variable.scss";
+@import "../../assets/styles/reset.scss";
+
+.modal__box {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.938);
+  height: 100%;
+  width: 100%;
+  z-index: 89;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__container {
+  display: flex;
+  border-radius: 0.8rem;
+  padding: 15px;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  gap: 25px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  //max-height: 500px;
+  margin: 0 15px;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    filter: blur(6px);
+    width: 100%;
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.623);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  & .pics {
+    display: flex;
+    overflow: hidden;
+    height: 120px;
+    width: 200px;
+    flex: none;
+    z-index: 88;
+    border: 2px solid white;
+    border-radius: 0.8rem;
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  & .overview {
+    display: flex;
+    flex-direction: column;
+    z-index: 88;
+    gap: 15px;
+
+    & span {
+      font-family: $fontBold;
+      font-size: 1.8rem;
+    }
+    & p {
+      font-family: $fontRegular;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    & .control-box {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      & .btn {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
